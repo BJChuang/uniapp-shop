@@ -1,0 +1,51 @@
+@font-face {
+  font-family: "iconfont"; /* Project id 3694056 */
+  src: url('iconfont.woff2?t=1666000717314') format('woff2'),
+       url('iconfont.woff?t=1666000717314') format('woff'),
+       url('iconfont.ttf?t=1666000717314') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.qwfenxiang:before {
+  content: "\e600";
+}
+
+.qwalipay:before {
+  content: "\e60a";
+}
+
+.qwwechat:before {
+  content: "\e614";
+}
+
+.qwmoney:before {
+  content: "\e790";
+}
+
+.qwmenu:before {
+  content: "\e657";
+}
+
+.qworder:before {
+  content: "\e6b8";
+}
+
+.qwdunpai:before {
+  content: "\e6b9";
+}
+
+.qwxiangzi:before {
+  content: "\e6ba";
+}
+
+.qwshijian:before {
+  content: "\e6bc";
+}
+

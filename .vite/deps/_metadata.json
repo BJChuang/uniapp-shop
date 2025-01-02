@@ -1,0 +1,13 @@
+{
+  "hash": "9ddf4cc0",
+  "browserHash": "95f07fcd",
+  "optimized": {
+    "base-64": {
+      "src": "../../node_modules/base-64/base64.js",
+      "file": "base-64.js",
+      "fileHash": "f98a4d22",
+      "needsInterop": true
+    }
+  },
+  "chunks": {}
+}
