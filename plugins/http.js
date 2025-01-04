@@ -143,7 +143,7 @@ export const R = {
 	
 	formatUrl(url){
 		if(!url || url == '') return undefined
-		if(url.indexOf('http://') == -1 && url.indexOf('https://') == -1) return 'https://www.amazontech.cc'+url
+		if(url.indexOf('http://') == -1 && url.indexOf('https://') == -1) return 'https://www.amazonshop.io'+url
 		console.log(url)
 		return url
 		
