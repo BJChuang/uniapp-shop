@@ -126,7 +126,7 @@
             "disableHostCheck" : true,
             "proxy" : {
                 "/api" : {
-                    "target" : "https://www.amazontech.cc",
+                    "target" : "https://www.amazontech.io",
                     "changeOrigin" : true,
                     "secure" : false,
                     "ws" : false,
