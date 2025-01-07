@@ -107,7 +107,7 @@
 	}
 	
 	// 检查版本
-	const checkVersion = (e)=>{
+	const checkVersion = (e,state)=>{
 		data.updateData = e
 		// #ifdef H5
 			return uni.showToast({
@@ -116,7 +116,9 @@
 			})
 		// #endif
 		let nowVersion = plus.runtime.versionCode
-		if(data.updateData.version_code <= nowVersion){
+		console.log('当前版本：',nowVersion,'线上版本：',data.updateData.version_code)
+		console.log(data.updateData.version_code <= nowVersion)
+		if(data.updateData.version_code <= nowVersion&&state){
 			return uni.showToast({
 				title:'您已经是最新版本~',
 				position:"bottom"
@@ -140,6 +142,7 @@
 			});
 		}
 		//下载包
+		console.log(data.updateData.url)
 		let downloadTask = uni.downloadFile({
 			url: data.updateData.url,
 			success: res => {
@@ -214,12 +217,13 @@
 	right: 0;
 	bottom: 0;
 	background: rgba(0,0,0, .65);
+	z-index: 9999;
 }
 .qw_update_main{
 	background: #fff;
 	border-radius: 30rpx;
 	position: absolute;
-	top: 320rpx;
+	top: 520rpx;
 	left: calc(50% - 300rpx);
 	width: 600rpx;
 	background-color: #fff;

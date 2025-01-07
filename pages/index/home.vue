@@ -90,14 +90,16 @@
 				</view>
 			</z-paging>
 		</view>
-		
+		<qw-updaters ref="updater"  />
 	</view>
 </template>
 
 <script setup>
-	import { reactive, ref } from "vue";
+	import { onMounted, reactive, ref } from "vue";
 	import {R} from '@/plugins/http.js' // 请求方式中间件
 	import dayjs from "dayjs"
+	import {onShow} from '@dcloudio/uni-app'
+	import config from '@/plugins/config.js' // 请求方式中间件
 	const paging = ref(null)
 	const data = reactive({
 		params:{
@@ -111,7 +113,15 @@
 		nav_bottom_adv:[],
 		notice:{},
 	})
-
+	onShow(()=>{
+		checkVersion()
+	})
+	const updater = ref(null)
+	const data2 = reactive({
+		user:{},
+		version:'1.0.0',
+		updateData:{},
+	})
 	const upCallback = (pageNo, pageSize)=>{
 		data.params.page = pageNo // 页码, 默认从1开始
 		data.params.per_page = pageSize // 页长, 默认每页10条
@@ -130,7 +140,24 @@
 			uni.hideLoading()
 		})
 	}
-	
+	const checkVersion = ()=>{
+		
+		
+		R.get('/app_versions',{device:'Android'},1).then(res=>{
+			if(res.code && res.code == 200){
+				data2.updateData = res.data
+				data2.updateData.content = R.editorHandle(data2.updateData.content)
+				data2.updateData.url = config.originPath + data2.updateData.url
+				let nowVersion = plus.runtime.versionCode
+				if(data2.updateData.version_code <= nowVersion){
+					return false
+				}else{
+					updater.value.checkVersion(data2.updateData,false)
+				}
+				
+			}
+		})
+	}
 	const scan = ()=>{
 		// #ifdef H5
 		R.toast('Wap端无法使用扫码')

@@ -98,8 +98,8 @@
 		R.post('/Wap/forget_password',{type:'phone',...data.params}).then(res=>{
 			if(res.code == 200){
 				uni.$emit('users')
-				// uni.setStorageSync('token',res.data.access_token);
-				sessionStorage.setItem('token',res.data.access_token)
+				uni.setStorageSync('token',res.data.access_token);
+				// sessionStorage.setItem('token',res.data.access_token)
 				uni.switchTab({
 					url:'/pages/index/self'
 				})

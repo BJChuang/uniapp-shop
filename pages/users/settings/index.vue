@@ -78,12 +78,13 @@
 	
 	const checkVersion = ()=>{
 		let platform = uni.getSystemInfoSync().platform
-		R.get('/Wap/app_versions',{device:platform},1).then(res=>{
+		R.get('/app_versions',{device:'Android'},1).then(res=>{
+			console.log(res)
 			if(res.code && res.code == 200){
 				data.updateData = res.data
 				data.updateData.content = R.editorHandle(data.updateData.content)
-				data.updateData.url = config.path + data.updateData.url
-				updater.value.checkVersion(data.updateData)
+				data.updateData.url = config.originPath + data.updateData.url
+				updater.value.checkVersion(data.updateData,true)
 			}
 		})
 	}
