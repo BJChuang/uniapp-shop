@@ -72,7 +72,8 @@
 		R.post('/Wap/login',data.params).then(res=>{
 			if(res.code == 200){
 				// console.log(res.data.access_token)
-				uni.setStorageSync('token',res.data.access_token);
+				// uni.setStorageSync('token',res.data.access_token);
+				sessionStorage.setItem('token',res.data.access_token)
 				uni.$emit('users')
 				uni.switchTab({
 					url:'/pages/index/self'

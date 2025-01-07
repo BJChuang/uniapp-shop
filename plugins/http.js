@@ -19,7 +19,8 @@ function request(url, data, method = 'get',customUrl = 0) {
 	}
 
 
-	let token = uni.getStorageSync('token');
+	// let token = uni.getStorageSync('token');
+	let token = sessionStorage.getItem('token')
 	if (token != undefined && token != null && token != '') {
 		defaultOpt.header.Authorization = 'Bearer ' + token;
 	}

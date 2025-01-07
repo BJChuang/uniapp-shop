@@ -130,7 +130,8 @@
 						url:'/pages/auth/login'
 					})
 				}
-				uni.setStorageSync('token',res.data.access_token);
+				// uni.setStorageSync('token',res.data.access_token);
+				sessionStorage.setItem('token',res.data.access_token)
 				uni.switchTab({
 					url:'/pages/index/self'
 				})
