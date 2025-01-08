@@ -114,7 +114,9 @@
 		notice:{},
 	})
 	onShow(()=>{
+		// #ifdef APP
 		checkVersion()
+		// #endif
 	})
 	const updater = ref(null)
 	const data2 = reactive({

@@ -176,7 +176,7 @@
 		// #ifdef APP-PLUS
 		// wgt资源包安装
 		plus.runtime.install(data.tempFilePath, {
-			force: false
+			force: true
 		}, async res => {
 			// wgt包，安装后会提示 安装成功，是否重启
 			if (data.updateData.is_wgt == 1) {
