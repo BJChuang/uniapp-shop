@@ -82,7 +82,7 @@
 		</view>
 
 		<!-- 主体内容开始2 -->
-		<view class="store_info_sy_main change" v-if="data.topIndex==1">
+		<view class="store_info_sy_main change statistics" v-if="data.topIndex==1">
 			<view class="store_more_info">
 
 				<view class="item">
@@ -109,6 +109,19 @@
 					<view class="title">累积销售额：</view>
 					<view class="content">{{statistics.salesAllMoney}}</view>
 				</view>
+				<view class="item">
+					<view class="title">今日订单数：</view>
+					<view class="content">{{statistics.todayOrders}}</view>
+				</view>
+				<view class="item">
+					<view class="title">今日订单总额：</view>
+					<view class="content">{{statistics.todayTotalPrice}}</view>
+				</view>
+				<view class="item">
+					<view class="title">今日总利润：</view>
+					<view class="content">{{statistics.todayOrderProfile}}</view>
+				</view>
+				
 			</view>
 		</view>
 
@@ -522,6 +535,19 @@
 				background: #fff;
 			}
 
+		}
+		.statistics{
+			width: 690rpx;
+			margin: 30rpx auto;
+			border-radius: 30rpx;
+			.store_more_info{
+				.item{
+					justify-content: space-between;
+					.title{
+						font-size: 28rpx;
+					}
+				}
+			}
 		}
 
 		.category_left {
