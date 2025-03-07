@@ -12,7 +12,6 @@
 					<uni-icons type="chat" color="#fff" size="24" @click="R.nav('/pages/chats/index')"></uni-icons>
 				</view>
 				<!-- #endif -->
-				
 			</view>
 			
 			<view class="home_search">

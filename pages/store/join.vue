@@ -62,7 +62,7 @@
 					<text>地址区域</text>
 					<view class="area_info">
 						<picker mode="multiSelector" :value="data.rangeIndex" @columnchange="columnchange" :range="data.ranges" @change="areaChange">
-							<view style="color: #666;margin-left: 220rpx;">{{data.info.area_info||'选择城市'}}</view>
+							<view class="slh" style="color: #666;margin-left:70rpx;">{{data.info.area_info||'选择城市'}}</view>
 						</picker>
 					</view>
 				</view>
@@ -301,7 +301,12 @@
 </script>
 
 <style lang="scss" scoped>
-
+	.slh{
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		width: 400rpx;
+	}
 	.identityTwo {
 		background-color: #fff;
 		padding-left: 52rpx;
@@ -311,13 +316,13 @@
 		color: #222222;
 		font-size: 30rpx;
 		width: 180rpx;
-		float: left;
+		
 	}
 
 	.identityTwo .list input {
 		flex: 1;
-		float: left;
-		margin-top: 24rpx;
+		
+		// margin-top: 24rpx;
 	}
 
 	.check_content {
@@ -426,6 +431,7 @@
 		line-height: 100rpx;
 		align-items: center;
 		justify-content: flex-start;
+		display: flex;
 	}
 
 	.list:nth-of-type(1) {

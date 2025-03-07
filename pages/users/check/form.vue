@@ -1,6 +1,6 @@
 <template>
 	<view class="check_content ">
-		<view class="pdbg">
+		<!-- <view class="pdbg">
 			<view class="identityTop ct30 br20">
 				<view class="title">实名认证</view>
 				<view class="bz">为保证用户身份安全，身份证信息我们会严格保密</view>
@@ -17,8 +17,8 @@
 						<view>点击上传<text>国徽面</text></view>
 					</view>
 				</view>
-			</view>
-			<view class="identityTwo ct30 br20">
+			</view> -->
+			<!-- <view class="identityTwo ct30 br20">
 				<view class="list hi-rows">
 					<text>真实姓名</text>
 					<input type="text" v-model="data.info.name" placeholder="真实姓名" placeholder-style="color:#D7D7D7" />
@@ -38,17 +38,25 @@
 					<input type="number" v-model="data.info.bank_no" placeholder="银行卡号 提现需要"
 						placeholder-style="color:#D7D7D7" />
 				</view>
+			</view> -->
+			<!-- 设置trc20 地址 -->
+			<view class="identityTwo ct30 br20">
+				<view class="list hi-rows">
+					<text>TRC20</text>
+					<input type="text" v-model="trc20address" placeholder="请输入TRC20地址" placeholder-style="color:#D7D7D7" />
+				</view>
+				
 			</view>
-		</view>
+		<!-- </view> -->
 
-		<view class="viewBtn" @tap="editCheck">完成认证</view>
+		<view class="viewBtn" @tap="editCheck">设置</view>
 
 	</view>
 </template>
 
 <script setup>
 	import {
-		reactive
+		reactive, ref
 	} from 'vue'
 	import {
 		onLoad
@@ -58,7 +66,7 @@
 	} from '@/plugins/http.js' // 请求方式中间件
 
 	import config from "@/plugins/config.js";
-
+	const trc20address = ref()
 	const data = reactive({
 		isshow: false, //弹出显示状态
 		z_img: '/static/identity/front.jpg',
@@ -77,16 +85,11 @@
 
 	const editCheck = () => {
 		// console.log(data.info);
-		if (R.isEmpty(data.info.name) ||
-			R.isEmpty(data.info.card_no) ||
-			R.isEmpty(data.info.card_b) ||
-			R.isEmpty(data.info.card_t) ||
-			R.isEmpty(data.info.bank_name) ||
-			R.isEmpty(data.info.bank_no)) {
-			return R.toast('请认真填写认证信息')
+		if (R.isEmpty(trc20address.value)) {
+			return R.toast('请填写TRC20 地址')
 		}
 
-		R.post('/Wap/users/check', data.info).then(res => {
+		R.post('/Wap/users/check', {trc20address:trc20address.value}).then(res => {
 			if (res.code == 200) {
 				R.toast('认证成功')
 				uni.$emit('users')
@@ -274,6 +277,7 @@
 		line-height: 100rpx;
 		align-items: center;
 		justify-content: flex-start;
+		overflow: hidden;
 	}
 
 	.list:nth-of-type(1) {

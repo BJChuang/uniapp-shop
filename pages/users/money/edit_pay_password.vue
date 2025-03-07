@@ -60,12 +60,12 @@
 		color: #222222;
 		font-size: 30rpx;
 		width: 180rpx;
-		float: left;
+		
 	}
 	.identityTwo .list input {
 		flex: 1;
-		float: left;
-		margin-top: 24rpx;
+		
+		// margin-top: 24rpx;
 	}
 	.identityTwo {
 		margin-top: 26rpx;
@@ -75,6 +75,7 @@
 		line-height: 100rpx;
 		align-items: center;
 		justify-content: flex-start;
+		display: flex;
 	}
 	.list input {
 		font-size: 30rpx;

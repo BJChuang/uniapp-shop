@@ -3,505 +3,426 @@
 		{
 			"path": "pages/index/home",
 			"style": {
-				"navigationStyle":"custom",
+				"navigationStyle": "custom",
 				"navigationBarTitleText": "首页",
 				"app-plus": {
 					"titleNView": false, //禁用原生导航栏  。               
-					"bounce":false
+					"bounce": false
 				},
-				"navigationBarTextStyle":"white",  //状态栏字体颜色
+				"navigationBarTextStyle": "white", //状态栏字体颜色
 				"enablePullDownRefresh": false
 			}
-		}
-        ,{
-            "path" : "pages/index/category",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "商品分类",
-                "enablePullDownRefresh": false
-            }
-            
-        }
+		}, {
+			"path": "pages/index/category",
+			"style": {
+				"navigationBarTitleText": "商品分类",
+				"enablePullDownRefresh": false
+			}
 
-        ,{
-            "path" : "pages/index/cart",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "购物车",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-        ,{
-            "path" : "pages/index/self",
-            "style" :                                                                                    
-            {
-				"navigationStyle":"custom",
-                "navigationBarTitleText": "我的",
-				"app-plus": {
-					"titleNView": false, //禁用原生导航栏  。               
-					"bounce":false
-				},
-				"navigationBarTextStyle":"white",  //状态栏字体颜色
-                "enablePullDownRefresh": false
-            }
-            
-        }
-        ,{
-            "path" : "pages/users/wallet",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "我的钱包",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-        ,{
-            "path" : "pages/users/settings/index",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "设置中心",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-        ,{
-            "path" : "pages/users/settings/person",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "个人资料",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-        ,{
-            "path" : "pages/users/settings/bind",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "账号绑定",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-        ,{
-            "path" : "pages/users/addresses/index",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "收货地址",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-        ,{
-            "path" : "pages/users/addresses/edit",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "编辑地址",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-        ,{
-            "path" : "pages/users/coupons/index",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "优惠券",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-        ,{
-            "path" : "pages/users/inviters/index",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "分享海报",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-        ,{
-            "path" : "pages/users/inviters/direct",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "我的推荐",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-        ,{
-            "path" : "pages/users/favorites/index",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "我的收藏",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-        ,{
-            "path" : "pages/goods/index",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "商品列表",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-        ,{
-            "path" : "pages/goods/info",
-            "style" :                                                                                    
-            {
-				"navigationStyle":"custom",
-                "navigationBarTitleText": "商品详情",
-				"app-plus": {
-					"titleNView": false, //禁用原生导航栏  。               
-					"bounce":false
-				},
-                "enablePullDownRefresh": false
-            }
-            
-        }
-        ,{
-            "path" : "pages/orders/index",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "我的订单",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-        ,{
-            "path" : "pages/goods/comment",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "商品评价",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-		,{
-		    "path" : "pages/auth/login",
-		    "style" :                                                                                    
-		    {
-				"navigationStyle":"custom",
-		        "navigationBarTitleText": "用户登录",
-				"app-plus": {
-					"bounce":false
-				},
-				"navigationBarTextStyle":"white",  //状态栏字体颜色
-		        "enablePullDownRefresh": false
-		    }
-		    
 		}
-		,{
-		    "path" : "pages/auth/register",
-		    "style" :                                                                                    
-		    {
-				"navigationStyle":"custom",
-		        "navigationBarTitleText": "用户注册",
+
+		, {
+			"path": "pages/index/cart",
+			"style": {
+				"navigationBarTitleText": "购物车",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/index/self",
+			"style": {
+				"navigationStyle": "custom",
+				"navigationBarTitleText": "我的",
 				"app-plus": {
-					"bounce":false
+					"titleNView": false, //禁用原生导航栏  。               
+					"bounce": false
 				},
-				"navigationBarTextStyle":"white",  //状态栏字体颜色
-		        "enablePullDownRefresh": false
-		    }
-		    
+				"navigationBarTextStyle": "white", //状态栏字体颜色
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/users/wallet",
+			"style": {
+				"navigationBarTitleText": "我的钱包",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/users/settings/index",
+			"style": {
+				"navigationBarTitleText": "设置中心",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/users/settings/person",
+			"style": {
+				"navigationBarTitleText": "个人资料",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/users/settings/bind",
+			"style": {
+				"navigationBarTitleText": "账号绑定",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/users/addresses/index",
+			"style": {
+				"navigationBarTitleText": "收货地址",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/users/addresses/edit",
+			"style": {
+				"navigationBarTitleText": "编辑地址",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/users/coupons/index",
+			"style": {
+				"navigationBarTitleText": "优惠券",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/users/inviters/index",
+			"style": {
+				"navigationBarTitleText": "分享海报",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/users/inviters/direct",
+			"style": {
+				"navigationBarTitleText": "我的推荐",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/users/favorites/index",
+			"style": {
+				"navigationBarTitleText": "我的收藏",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/goods/index",
+			"style": {
+				"navigationBarTitleText": "商品列表",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/goods/info",
+			"style": {
+				"navigationStyle": "custom",
+				"navigationBarTitleText": "商品详情",
+				"app-plus": {
+					"titleNView": false, //禁用原生导航栏  。               
+					"bounce": false
+				},
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/orders/index",
+			"style": {
+				"navigationBarTitleText": "我的订单",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/goods/comment",
+			"style": {
+				"navigationBarTitleText": "商品评价",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/auth/login",
+			"style": {
+				"navigationStyle": "custom",
+				"navigationBarTitleText": "用户登录",
+				"app-plus": {
+					"bounce": false
+				},
+				"navigationBarTextStyle": "white", //状态栏字体颜色
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/auth/register",
+			"style": {
+				"navigationStyle": "custom",
+				"navigationBarTitleText": "用户注册",
+				"app-plus": {
+					"bounce": false
+				},
+				"navigationBarTextStyle": "white", //状态栏字体颜色
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/auth/forget_password",
+			"style": {
+				"navigationStyle": "custom",
+				"navigationBarTitleText": "忘记密码",
+				"app-plus": {
+					"bounce": false
+				},
+				"navigationBarTextStyle": "white", //状态栏字体颜色
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/orders/create",
+			"style": {
+				"navigationBarTitleText": "创建订单",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/orders/pay_order",
+			"style": {
+				"navigationBarTitleText": "支付订单",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/orders/pay",
+			"style": {
+				"navigationBarTitleText": "在线支付",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/orders/info",
+			"style": {
+				"navigationBarTitleText": "订单详情",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/orders/express",
+			"style": {
+				"navigationBarTitleText": "订单物流",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/users/check/index",
+			"style": {
+				"navigationBarTitleText": "TRC20地址",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/users/check/form",
+			"style": {
+				"navigationBarTitleText": "申请认证",
+				"enablePullDownRefresh": false
+			}
+
 		}
-		,{
-		    "path" : "pages/auth/forget_password",
-		    "style" :                                                                                    
-		    {
-				"navigationStyle":"custom",
-		        "navigationBarTitleText": "忘记密码",
+
+		, {
+			"path": "pages/users/trc20/index",
+			"style": {
+				"navigationBarTitleText": "提现地址",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/users/trc20/form",
+			"style": {
+				"navigationBarTitleText": "修改地址",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/users/money/index",
+			"style": {
+				"navigationBarTitleText": "资金变动",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/users/money/edit_pay_password",
+			"style": {
+				"navigationBarTitleText": "修改支付密码",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/users/cashes/index",
+			"style": {
+				"navigationBarTitleText": "提现日志",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/users/cashes/form",
+			"style": {
+				"navigationBarTitleText": "申请提现",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/store/index",
+			"style": {
+				"navigationStyle": "custom",
+				"navigationBarTitleText": "店铺中心",
 				"app-plus": {
-					"bounce":false
+					"titleNView": false, //禁用原生导航栏  。               
+					"bounce": false
 				},
-				"navigationBarTextStyle":"white",  //状态栏字体颜色
-		        "enablePullDownRefresh": false
-		    }
-		    
+				"navigationBarTextStyle": "white", //状态栏字体颜色
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/search/index",
+			"style": {
+				"navigationBarTitleText": "商城搜索",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/integrals/index",
+			"style": {
+				"navigationStyle": "custom",
+				"navigationBarTitleText": "积分商城",
+				"app-plus": {
+					"titleNView": false, //禁用原生导航栏  。               
+					"bounce": false
+				},
+				"navigationBarTextStyle": "white", //状态栏字体颜色
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/integrals/info",
+			"style": {
+				"navigationBarTitleText": "商品详情",
+				"app-plus": {
+					"titleNView": false, //禁用原生导航栏  。               
+					"bounce": false
+				},
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/integrals/create",
+			"style": {
+				"navigationBarTitleText": "创建订单",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/orders/success",
+			"style": {
+				"navigationBarTitleText": "支付成功",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/integrals/success",
+			"style": {
+				"navigationBarTitleText": "支付成功",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/integrals/orders",
+			"style": {
+				"navigationBarTitleText": "积分订单",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/integrals/order",
+			"style": {
+				"navigationBarTitleText": "订单详情",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/goods/seckills",
+			"style": {
+				"navigationBarTitleText": "秒杀活动",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/goods/collectives",
+			"style": {
+				"navigationBarTitleText": "拼团活动",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/chats/index",
+			"style": {
+				"navigationBarTitleText": "在线客服",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/chats/chat",
+			"style": {
+				"navigationBarTitleText": "客服聊天",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/orders/comment",
+			"style": {
+				"navigationBarTitleText": "订单评论",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/refunds/index",
+			"style": {
+				"navigationBarTitleText": "售后订单",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/refunds/form",
+			"style": {
+				"navigationBarTitleText": "申请售后",
+				"enablePullDownRefresh": false
+			}
+
+		},
+		{
+			"path": "pages/store/join",
+			"style": {
+				"navigationBarTitleText": "商户入驻"
+			}
+		}, {
+			"path": "uni_modules/rt-uni-update/components/rt-uni-update/rt-uni-update",
+			"style": {
+				"app-plus": {
+					"animationDuration": 200,
+					"animationType": "fade-in",
+					"background": "transparent",
+					"backgroundColorTop": "transparent",
+					"popGesture": "none",
+					"scrollIndicator": false,
+					"titleNView": false
+				},
+				"disableScroll": true
+			}
 		}
-        ,{
-            "path" : "pages/orders/create",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "创建订单",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-        ,{
-            "path" : "pages/orders/pay_order",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "支付订单",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-        ,{
-            "path" : "pages/orders/pay",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "在线支付",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-        ,{
-            "path" : "pages/orders/info",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "订单详情",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-        ,{
-            "path" : "pages/orders/express",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "订单物流",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-        ,{
-            "path" : "pages/users/check/index",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "认证信息",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-        ,{
-            "path" : "pages/users/check/form",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "申请认证",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-        ,{
-            "path" : "pages/users/money/index",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "资金变动",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-        ,{
-            "path" : "pages/users/money/edit_pay_password",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "修改支付密码",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-        ,{
-            "path" : "pages/users/cashes/index",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "提现日志",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-        ,{
-            "path" : "pages/users/cashes/form",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "申请提现",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-        ,{
-            "path" : "pages/store/index",
-            "style" :                                                                                    
-            {
-				"navigationStyle":"custom",
-                "navigationBarTitleText": "店铺中心",
-				"app-plus": {
-					"titleNView": false, //禁用原生导航栏  。               
-					"bounce":false
-				},
-				"navigationBarTextStyle":"white",  //状态栏字体颜色
-                "enablePullDownRefresh": false
-            }
-            
-        }
-        ,{
-            "path" : "pages/search/index",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "商城搜索",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-        ,{
-            "path" : "pages/integrals/index",
-            "style" :                                                                                    
-            {
-				"navigationStyle":"custom",
-                "navigationBarTitleText": "积分商城",
-				"app-plus": {
-					"titleNView": false, //禁用原生导航栏  。               
-					"bounce":false
-				},
-				"navigationBarTextStyle":"white",  //状态栏字体颜色
-                "enablePullDownRefresh": false
-            }
-            
-        }
-        ,{
-            "path" : "pages/integrals/info",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "商品详情",
-				"app-plus": {
-					"titleNView": false, //禁用原生导航栏  。               
-					"bounce":false
-				},
-                "enablePullDownRefresh": false
-            }
-            
-        }
-        ,{
-            "path" : "pages/integrals/create",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "创建订单",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-        ,{
-            "path" : "pages/orders/success",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "支付成功",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-        ,{
-            "path" : "pages/integrals/success",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "支付成功",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-        ,{
-            "path" : "pages/integrals/orders",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "积分订单",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-        ,{
-            "path" : "pages/integrals/order",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "订单详情",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-        ,{
-            "path" : "pages/goods/seckills",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "秒杀活动",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-        ,{
-            "path" : "pages/goods/collectives",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "拼团活动",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-        ,{
-            "path" : "pages/chats/index",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "在线客服",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-        ,{
-            "path" : "pages/chats/chat",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "客服聊天",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-        ,{
-            "path" : "pages/orders/comment",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "订单评论",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-        ,{
-            "path" : "pages/refunds/index",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "售后订单",
-                "enablePullDownRefresh": false
-            }
-            
-        }
-        ,{
-            "path" : "pages/refunds/form",
-            "style" :                                                                                    
-            {
-                "navigationBarTitleText": "申请售后",
-                "enablePullDownRefresh": false
-            }
-            
-        },
-        {
-        	"path" : "pages/store/join",
-        	"style" : 
-        	{
-        		"navigationBarTitleText" : "商户入驻"
-        	}
-        }
-    ,{
-    "path": "uni_modules/rt-uni-update/components/rt-uni-update/rt-uni-update",
-    "style": {
-        "app-plus": {
-            "animationDuration": 200,
-            "animationType": "fade-in",
-            "background": "transparent",
-            "backgroundColorTop": "transparent",
-            "popGesture": "none",
-            "scrollIndicator": false,
-            "titleNView": false
-        },
-        "disableScroll": true
-    }
-}
-],
+	],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "uni-app",

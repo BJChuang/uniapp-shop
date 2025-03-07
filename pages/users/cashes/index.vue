@@ -7,9 +7,9 @@
 					<text class="t2">{{v.name}}</text>
 				</view>
 				<view class="right_item">
-					<text class="t1">{{v.bank_name||'-'}}</text>
+					<!-- <text class="t1">{{v.bank_name||'-'}}</text> -->
 					<!-- <text class="t2">卡号: {{v.card_no||'-'}}</text> -->
-					<text class="t3">卡号: {{v.card_no}}</text>
+					<text class="t3">trc20地址: {{v.trc20address}}</text>
 					<text class="t4" v-if="v.cash_status == 0">申请中</text>
 					<text class="t4 success" v-if="v.cash_status == 1">申请成功</text>
 					<text class="t4 error" v-if="v.cash_status == 2">拒绝申请</text>
@@ -103,9 +103,15 @@
 			border-bottom: 1px dashed #ccc;
 		}
 		.t3{
-			margin-top: 10rpx;
+			margin-top: 20rpx;
 			font-size: $uni-font-size-sm;
 			color:#999;
+			display: block;
+			width: 300rpx;
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			overflow: hidden;
+			
 		}
 		.t4{
 			position: absolute;

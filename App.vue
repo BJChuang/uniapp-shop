@@ -2,10 +2,21 @@
 	import {
 		R
 	} from '@/plugins/http.js' // 请求方式中间件
+	// import {
+	// 	debuggerModule,
+	// 	installDebugger
+	// } from 'uni_modules/imengyu-IMDebuggerWindow/common/debuggerExtern.js'
+
 	import silenceUpdate from '@/uni_modules/rt-uni-update/js_sdk/silence-update.js' //引入静默更新
 	export default {
 		onLaunch: function() {
+			// @ 需求：每次打开都输入密码
 			uni.clearStorageSync()
+			if (process.env.NODE_ENV === 'development')
+				installDebugger({
+					enableRequestInterceptor: false, //默认为false，指示是否拦截网络请求，参见下一条
+					showGlobalFloatWindow: true //默认为true，指定是否添加一个全局的调试按钮，点击可跳转至窗口
+				});
 			// 根据情况获取openid
 			let isOpenId = false
 			// #ifdef H5
@@ -97,15 +108,15 @@
 
 		},
 		onShow: function() {
-			
 
-			
+
+
 		},
 		onHide: function() {
-			console.log('App Hide')
+			console.log('')
 		},
-		onUnload:function(){
-			console.log('onExit')
+		onUnload: function() {
+			console.log('')
 			uni.clearStorageSync()
 		}
 	}

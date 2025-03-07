@@ -1,9 +1,9 @@
 {
-    "name" : "amazonShop",
-    "appid" : "__UNI__C8DF786",
-    "description" : "amazon",
-    "versionName" : "1.0.3",
-    "versionCode" : 103,
+    "name" : "ChineseMall",
+    "appid" : "__UNI__842DBF2",
+    "description" : "ChineseMall",
+    "versionName" : "1.0.4",
+    "versionCode" : 104,
     "transformPx" : false,
     /* 5+App特有相关 */
     "app-plus" : {
@@ -96,6 +96,9 @@
                         "spotlight@3x" : "unpackage/res/icons/120x120.png"
                     }
                 }
+            },
+            "splashscreen" : {
+                "androidStyle" : "default"
             }
         }
     },
@@ -124,7 +127,7 @@
     "vueVersion" : "3",
     "h5" : {
         "router" : {
-            "mode" : "history",
+            "mode" : "hash",
             "base" : ""
         },
         "devServer" : {
@@ -139,6 +142,11 @@
                         "^/api" : ""
                     }
                 }
+            }
+        },
+        "optimization" : {
+            "treeShaking" : {
+                "enable" : true
             }
         }
     }

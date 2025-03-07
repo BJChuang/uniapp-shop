@@ -24,7 +24,7 @@
 				<uni-list-item showExtraIcon :extraIcon="{type:'eye-slash-filled',size:22,color:'#009cff'}" title="冻结记录" link to="/pages/users/money/index?is_type=1"  ></uni-list-item>
 				<!-- <uni-list-item showExtraIcon :extraIcon="{type:'vip-filled',size:22,color:'#8717f9'}" title="积分记录" link to="/pages/users/money/index?is_type=2"  ></uni-list-item> -->
 				<uni-list-item showExtraIcon :extraIcon="{type:'calendar-filled',size:22,color:'#50bc89'}" title="提现记录" link to="/pages/users/cashes/index" ></uni-list-item>
-				<uni-list-item showExtraIcon :extraIcon="{type:'auth',size:22,color:'#ff9000'}" title="身份认证" link :to="data.user.check?'/pages/users/check/index':'/pages/users/check/form'"  :rightText="data.user.check?'已认证':'未认证'" ></uni-list-item>
+				<uni-list-item showExtraIcon :extraIcon="{type:'refresh-filled',size:22,color:'#ff9000'}" title="TRC20地址" link :to="data.user.check?'/pages/users/check/index':'/pages/users/check/form'"  :rightText="data.user.check?'已设置':'未设置'" ></uni-list-item>
 				<uni-list-item showExtraIcon :extraIcon="{type:'locked-filled',size:22,color:'#e13f1f'}" title="修改支付密码" link to="/pages/users/money/edit_pay_password"  ></uni-list-item>
 			</uni-list>
 		</view>

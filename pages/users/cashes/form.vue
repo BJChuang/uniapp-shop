@@ -2,25 +2,26 @@
 	<view class="cash_out">
 		<view class="pdbg">
 			<view class="item">
-				<text class="t1">真实姓名</text>
-				<text class="t2">{{data.checkInfo.name||'-'}}</text>
-				<view class="t3" @click="R.nav('/pages/users/check/form?edit=true')"> <uni-icons type="compose"></uni-icons> </view>
+				<text class="t1">TRC20</text>
+				<text class="t2 t3">{{data.checkInfo.trc20address||'-'}}</text>
+				<!-- <view class="t3" @click="R.nav('/pages/users/check/form?edit=true')"> <uni-icons type="compose"></uni-icons> </view> -->
 			</view>
-			<view class="item">
+			<!-- <view class="item">
 				<text class="t1">提现银行</text>
 				<text class="t2">{{data.checkInfo.bank_name||'-'}}</text>
 			</view>
 			<view class="item">
 				<text class="t1">银行卡号</text>
 				<text class="t2">{{data.checkInfo.bank_no||'-'}}</text>
-			</view>
+			</view> -->
 			
 	<!-- 		<view class="item">
 				<text class="t1">验证码</text>
 				<input class="t2" type="text"  v-model="data.code" placeholder="请输入验证码" placeholder-style="font-size:28rpx" />
 				<view :class="data.wait?'send ck':'send'" @click="sendSms()">{{data.text}}</view>
 			</view>
-			<view class="item">
+			 -->
+			<!-- <view class="item">
 				<text class="t1">支付密码</text>
 				<input class="t2" type="password" v-model="data.pay_password" placeholder="请输入6位支付密码" placeholder-style="font-size:28rpx" />
 			</view> -->
@@ -94,7 +95,7 @@
 		uni.showLoading({
 			mask:true
 		})
-		R.post('/Wap/users/cashes',{money:data.money,code:data.code,py_password:data.pay_password}).then(res=>{
+		R.post('/Wap/users/cashes',{money:data.money,trc20address:data.checkInfo.trc20address,pay_password:data.pay_password}).then(res=>{
 			
 			if(res.code == 200 && res.data != null){
 				uni.$emit('users')
@@ -129,6 +130,7 @@
 			if(res.code == 200 && res.data != null){
 				data.userInfo = res.data
 				data.checkInfo = res.data.user_check
+				// 去掉实名验证
 				if(res.data.user_check == null){
 					R.nav('/pages/users/check/form')
 				}
@@ -228,7 +230,12 @@
 		}
 		.t1{margin-right: 20rpx;flex:0 0 120rpx;}
 		.t2{color:#999;}
-		.t3{position: absolute;right: 20rpx;border-left: 1px solid #f1f1f1;padding-left: 20rpx;}
+		.t3{
+			text-overflow: ellipsis;
+			white-space: nowrap;
+			overflow: hidden;
+			display: inline-block;
+		}
 	}
 	.send{
 		flex: 0 0 140rpx;border-left: 1px solid #eee;padding-left: 20rpx;padding-right: 20rpx;text-align: center;
