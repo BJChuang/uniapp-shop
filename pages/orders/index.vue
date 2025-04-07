@@ -41,7 +41,7 @@
 												<!-- <text class="attr-box">规格:{{goodsItem.sku_name||' -'}}  x {{goodsItem.buy_num||'1'}}</text>
 												<text class="price">{{goodsItem.goods_price||'00.00'}}</text> -->
 											</view>
-											<!-- <text v-if="item.order_status==5" style="color: #007afffc;">物流配送中</text> -->
+											<!-- <text v-if="item.order_status==5" style="color: #007afffc;">预计3天到达</text> -->
 											
 										</view>
 										
@@ -68,7 +68,7 @@
 												<!-- <button class="action-btn pay" v-if="item.order_status==4" @click="R.nav('/pages/orders/comment?id='+item.id)">前往评论</button> -->
 											</view>
 										</view>
-										
+										<!-- <text style="color: #007afffc;margin-bottom: 30rpx;text-align: right;">预计3天到达</text> -->
 									</view>
 								</view>
 							</swiper-item>
@@ -249,7 +249,7 @@
 	padding-top: 10px; 
 	height: 100%;
 	.swiper-box{
-		// height: calc(100% - 41px);
+		// height: calc(100% - 41px);3342
 	}
 }
 .order-item{
